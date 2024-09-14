@@ -17,7 +17,7 @@ app.engine('mustache', mustacheExpress());
 
 // Render the template
 app.get('/', (req, res) => {
-    res.render("pages/index.html");
+    res.render("index");
 })
 
 app.get('/jobs/:id', (req, res) => {

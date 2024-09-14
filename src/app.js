@@ -1,9 +1,9 @@
 require('dotenv').config();
-const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
 const mustacheExpress = require('mustache-express');
+const BLOGS = require('./blogs');
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,8 +16,10 @@ app.engine('mustache', mustacheExpress());
 
 // Render the template
 app.get('/', (req, res) => {
-    res.render("index");
+    res.render("index", { blogs: BLOGS});
 })
+
+
 
 
 

@@ -55,61 +55,16 @@
     <h3>Newest reads</h3>
 
     <div id="content-container">
-        <div class="card">
-            <img class="image" src="../asset/images/image1.jpeg" alt="Russia's Corozov Collection">
-            <div class="content-box">
-                <div class="date">5 August, 2022</div>
-                <div class="small-title">France seeks to protect Russia's Morozov collection from seizure as masterpieces return home</div>
-                <div class="read-more">Read More -></div>
+        {{#blogs}}
+            <div class="card">
+                <img class="image" src="../asset/images/image{{id}}.jpeg" alt="Russia's Corozov Collection">
+                <div class="content-box">
+                    <div class="date">{{date}}</div>
+                    <div class="small-title">{{title}}</div>
+                    <div class="read-more">Read More -></div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <img class="image" src="../asset/images/image2.jpeg" alt="Picasso' Galery">
-            <div class="content-box">
-                <div class="date">17 February, 2024</div>
-                <div class="small-title">Picasso’s muse as sea creature—will it break $100m at Sotheby's New York sale?</div>
-                <div class="read-more">Read More -></div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="image" src="../asset/images/image3.jpeg" alt="Venice Biennale">
-            <div class="content-box">
-                <div class="date">12 December, 2023</div>
-                <div class="small-title">Venice Biennale 2022: all the national pavilions, artists and curators</div>
-                <div class="read-more">Read More -></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="content-container">
-        <div class="card">
-            <img class="image" src="../asset/images/image4.jpeg" alt="Robot Sculpture">
-            <div class="content-box">
-                <div class="date">18 July, 2024</div>
-                <div class="small-title">This robot family is made from used lamp parts, stainless steel spoons and forks, stainless steel salt and pepper</div>
-                <div class="read-more">Read More -></div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img class="image" src="../asset/images/image5.jpeg" alt="Eye Ball Image">
-            <div class="content-box">
-                <div class="date">1 January, 2023</div>
-                <div class="small-title">7 Tips to Finding Inspiration for Art: Go outside, look ar other creatives, scribble it down, do something new</div>
-                <div class="read-more">Read More -></div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="image" src="../asset/images/image6.jpeg" alt="Picasso' Galery">
-            <div class="content-box">
-                <div class="date">17 February, 2024</div>
-                <div class="small-title">Exploring Pop Art: Definition, Movement, and Notable Artists</div>
-                <div class="read-more">Read More -></div>
-            </div>
-        </div>
+        {{/blogs}}
     </div>
 </body>
 </html>

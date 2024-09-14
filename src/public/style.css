@@ -25,10 +25,14 @@ h3 {
     margin-bottom: 0;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 #head-container {
     background-image: url("asset/images/background.jpeg");
     background-repeat: no-repeat;
-    height: 1024px;
+    height: 720px;
     padding: 1.78rem;
     background-size: cover;
     
@@ -127,7 +131,7 @@ h3 {
 
 .card {
     border: 1px solid #DDDDDD;
-    width: 20%;
+    max-width: 75%;
     height: 619px;
     margin: 0px auto;
 }
@@ -195,7 +199,7 @@ h3 {
     }
 
     .card {
-        width: 33%;
+        width: 30%;
     }
   }
 
@@ -242,6 +246,48 @@ h3 {
 
     #title-box {
         width: 50%;
+    }
+
+    .desktop-option {
+        box-sizing: inherit;
+        transition-property: all;
+        transition-duration: .6s;
+        transition-timing-function: ease;
+        cursor: pointer;
+        letter-spacing: 0;
+        text-decoration: none;
+    }
+
+    .desktop-option:hover,
+    .desktop-option:active {
+    letter-spacing: 5px;
+    }
+
+    .desktop-option:after,
+    .desktop-option:before {
+    backface-visibility: hidden;
+    border: 1px solid white;
+    bottom: 0px;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+    }
+
+    .desktop-option:hover:after,
+    .desktop-option:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 100%;
+    }
+
+    .desktop-option:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 100%;
     }
   }
 

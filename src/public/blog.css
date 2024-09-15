@@ -7,7 +7,6 @@ body {
 
 #header-part {
     padding: 10px;
-    padding-left: 10px !important;
     background-color: rgb(252, 245, 236);
 }
 
@@ -30,7 +29,10 @@ button {
 }
 
 #main-content {
-    max-width: 800px;;
+    max-width: 800px;
+    padding: 15px;
+    padding-top: 0;
+    margin: 0 auto;
 }
 
 #date {
@@ -49,4 +51,16 @@ p {
 
 h3 {
     padding: 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .desktop-option:after,
+    .desktop-option:before {
+        border: 1px solid black;
+    }
+
+    .desktop-option:hover:after,
+    .desktop-option:hover:before {
+        border-color: black;
+    }
 }

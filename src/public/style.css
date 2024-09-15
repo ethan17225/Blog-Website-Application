@@ -110,7 +110,8 @@ button:hover {
 .mt-option {
     width: 26.25px;
     height: 2.92px;
-    background-color: white;;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
 #title-box {
@@ -344,3 +345,55 @@ footer {
     }
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(24, 24, 40, 0.95); /* Dark background to match the header */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(217, 133, 44, 0.1); /* Subtle highlight color */
+    color: #D9852C; /* Accent color from the original design */
+}
+
+.dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .mt-option {
+    background-color: #D9852C; /* Change color on hover */
+}

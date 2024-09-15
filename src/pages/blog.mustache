@@ -35,7 +35,7 @@
                 <div class="desktop-option">Company</div>
                 <button class="button" id="get-started-button"><span>Get Started</span></button>
             </div>
-            <div id="mobile-tablet-option">
+            <div id="mobile-tablet-option" class="dropdown">
                 <div class="mt-option"></div>
                 <div class="mt-option"></div>
                 <div class="mt-option"></div>
@@ -53,7 +53,7 @@
 
         <div id="main-content">
             {{#blog}}
-            <img src="../asset/images/image{{id}}.jpeg" alt="background">
+            <img src="../asset/images/image{{id}}.jpeg" alt="{{alt}}">
             <h3>{{title}}</h3>
             <div id="date">{{date}}</div>
             <div id="content">{{{content}}}</div>

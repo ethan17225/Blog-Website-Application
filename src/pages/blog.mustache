@@ -42,12 +42,14 @@
             </div>
         </div>
 
-        {{#blog}}
-        <img src="../asset/images/image{{id}}.jpeg" alt="background">
-        <h1>{{title}}</h1>
-        <div id="date">{{date}}</div>
-        <div id="content">{{{content}}}</div>
-        {{/blog}}
+        <div id="main-content">
+            {{#blog}}
+            <img src="../asset/images/image{{id}}.jpeg" alt="background">
+            <h3>{{title}}</h3>
+            <div id="date">{{date}}</div>
+            <div id="content">{{{content}}}</div>
+            {{/blog}}
+        </div>
 
         <footer>
             2024 © Artjunks

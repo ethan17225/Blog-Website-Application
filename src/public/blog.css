@@ -8,7 +8,7 @@ body {
 #header-part {
     padding: 10px;
     padding-left: 10px !important;
-    background-color: antiquewhite;
+    background-color: rgb(252, 245, 236);
 }
 
 #logo {
@@ -27,4 +27,26 @@ img {
 
 button {
     border: 1px solid black !important;
+}
+
+#main-content {
+    max-width: 800px;;
+}
+
+#date {
+    opacity: 0.5;
+}
+
+footer {
+    width: 100%;
+}
+
+p {
+    letter-spacing: 0.55px;
+     font-size: 16px;
+     line-height: 28px;
+}
+
+h3 {
+    padding: 0;
 }

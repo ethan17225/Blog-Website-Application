@@ -31,6 +31,10 @@ app.get('/blogs/:id', (req, res) => {
     res.render('blog', { blog: matchedBlog, content: matchedBlog.content });
 })
 
+app.get("/about", (req, res) => {
+    res.render(`about`);
+})
+
 
 const port = process.env.PORT || 3000;
 

@@ -20,8 +20,12 @@ img {
     object-fit:fill;
 }
 
-#logo, .desktop-option, .mt-option, button{
+#logo, .desktop-option, button{
     color: black !important;
+}
+
+.mt-option {
+    background-color: black;
 }
 
 button {

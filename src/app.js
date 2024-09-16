@@ -35,6 +35,10 @@ app.get("/about", (req, res) => {
     res.render(`about`);
 })
 
+app.get("/learnmore", (req, res) => {
+  res.render(`learnmore`);
+})
+
 
 const port = process.env.PORT || 3000;
 

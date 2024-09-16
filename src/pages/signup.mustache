@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results.">
+    <meta name="keywords" content="artjunks, collection, masterpieces">
+    <meta name="author" content="Ethan">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="ArtJunks">
+    <meta property="og:description" content="Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results.">
+    <meta property="og:image" content="../asset/images/background.jpeg">
+    <meta name="twitter:title" content="ArtJunks">
+    <meta name="twitter:description" content="Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results.">
+    <meta name="twitter:image" content="../asset/images/background.jpeg">
+
+    <title>ArtJunks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #1877f2;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 1rem;
+        }
+        .required {
+            color: red;
+        }
+        input {
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #1877f2;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #166fe5;
+        }
+        .error {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+
+    <link rel="icon" href="../asset/icons/logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <label for="username">Username <span class="required">*</span></label>
+            <input type="text" id="username" name="username" required>
+            <div id="username-error" class="error"></div>
+
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <div id="email-error" class="error"></div>
+
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="password" required>
+            <div id="password-error" class="error"></div>
+
+            <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <div id="confirm-password-error" class="error"></div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p>Your account is being created. Please wait for 1-2 days.</p>
+    </div>
+
+    <script>
+        const form = document.getElementById('signup-form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (validateForm()) {
+                showPopup();
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 3000); // Redirect after 3 seconds
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+
+            if (username.value.length < 3) {
+                showError('username', 'Username must be at least 3 characters long');
+                isValid = false;
+            } else {
+                clearError('username');
+            }
+
+            if (!isValidEmail(email.value)) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                clearError('email');
+            }
+
+            if (password.value.length < 8) {
+                showError('password', 'Password must be at least 8 characters long');
+                isValid = false;
+            } else {
+                clearError('password');
+            }
+
+            if (password.value !== confirmPassword.value) {
+                showError('confirm-password', 'Passwords do not match');
+                isValid = false;
+            } else {
+                clearError('confirm-password');
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function showError(field, message) {
+            const errorElement = document.getElementById(`${field}-error`);
+            errorElement.textContent = message;
+        }
+
+        function clearError(field) {
+            const errorElement = document.getElementById(`${field}-error`);
+            errorElement.textContent = '';
+        }
+
+        function showPopup() {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

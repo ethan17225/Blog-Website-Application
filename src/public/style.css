@@ -173,7 +173,11 @@ button:hover {
 }
 
 .card {
-    border: 1px solid #DDDDDD;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
     max-width: 80%;
     height: 619px;
     margin: 0px auto;
@@ -345,7 +349,7 @@ footer {
     }
   }
 
-  .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
     cursor: pointer;

@@ -288,7 +288,11 @@ footer {
         font-weight: 700;
         line-height: 48.41px;
     }
-
+    
+    #title-box {
+        width: 50%;
+    }
+    
     #mobile-tablet-option {
         display: none;
     }
@@ -313,9 +317,6 @@ footer {
         color: white;
     }
 
-    #title-box {
-        width: 50%;
-    }
 
     .desktop-option {
         box-sizing: inherit;

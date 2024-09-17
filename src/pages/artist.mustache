@@ -20,6 +20,33 @@
     <link rel="icon" href="../asset/icons/logo.jpeg" type="image/x-icon">
 </head>
 <body>
+    <div id="header-part">
+        <a id="logo" href="/">ARTJUNKS</a>
+        <div id="desktop-options">
+            <a class="desktop-option" href="/">Home</a>
+            <a class="desktop-option" href="/about">About</a>
+            <a class="desktop-option" href="/artists">Artists</a>
+            <a class="desktop-option">Careers</a>
+            <a class="desktop-option">News</a>
+            <div class="desktop-option">Company</div>
+            <button class="button" id="get-started-button" onclick="location.href = '/signup';"><span>Get Started</span></button>
+        </div>
+        <div id="mobile-tablet-option" class="dropdown">
+            <div class="mt-option"></div>
+            <div class="mt-option"></div>
+            <div class="mt-option"></div>
+            <div class="dropdown-content">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/artists">Artists</a>
+                    <a>Careers</a>
+                    <a>News</a>
+                    <a>Company</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h1>Artists Gallery</h1>
     <div class="artists-grid" id="artists-container">
         {{#artists}}
@@ -33,6 +60,12 @@
         </div>
         {{/artists}}
     </div>
+
+    <footer>
+            <div class="footer-component">2024 © Artjunks</div>
+            <a href="https://github.com/hai17225/Express-Web-Site" class="footer-component" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/ethan17225/" class="footer-component" target="_blank">Linkedin</a>
+    </footer>
 
     <script>
         function displayArtists(artistsToDisplay) {

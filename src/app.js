@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const mustacheExpress = require('mustache-express');
 const BLOGS = require('./blogs');
+const ARTISTS = require(`./artists`)
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'public'), {
@@ -41,6 +42,10 @@ app.get("/learnmore", (req, res) => {
 
 app.get("/signup", (req, res) => {
   res.render(`signup`);
+})
+
+app.get("/artists", (req, res) => {
+  res.render(`artist`, { artists: ARTISTS});
 })
 
 

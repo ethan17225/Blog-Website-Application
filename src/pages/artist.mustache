@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results.">
+    <meta name="keywords" content="artjunks, collection, masterpieces">
+    <meta name="author" content="Ethan">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="ArtJunks">
+    <meta property="og:description" content="Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results.">
+    <meta property="og:image" content="../asset/images/background.jpeg">
+    <meta name="twitter:title" content="ArtJunks">
+    <meta name="twitter:description" content="Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results.">
+    <meta name="twitter:image" content="../asset/images/background.jpeg">
+
+    <title>ArtJunks</title>
+    
+    <link rel="stylesheet" href="./artist.css">
+    <link rel="icon" href="../asset/icons/logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <h1>Artists Gallery</h1>
+    <div class="artists-grid" id="artists-container">
+        {{#artists}}
+        <div class="artist-card">
+            <img src="{{image}}" alt="{{name}}" class="artist-image">
+            <div class="artist-info">
+                <h2 class="artist-name">{{name}}</h2>
+                <p class="artist-genre">{{genre}}</p>
+                <p class="artist-description">{{description}}</p>
+            </div>
+        </div>
+        {{/artists}}
+    </div>
+
+    <script>
+        function displayArtists(artistsToDisplay) {
+            const rendered = Mustache.render(template, { artists: artistsToDisplay });
+            artistsContainer.innerHTML = rendered;
+        }
+
+        function filterArtists(searchTerm) {
+            return artists.filter(artist => 
+                artist.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                artist.genre.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value;
+            const filteredArtists = filterArtists(searchTerm);
+            displayArtists(filteredArtists);
+        });
+    </script>
+</body>
+</html>

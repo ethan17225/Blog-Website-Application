@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+header {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/api/placeholder/800/400') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+section:hover {
+    transform: translateY(-5px);
+}
+h2 {
+    color: #ff6b6b;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.job-listing {
+    border-left: 4px solid #4ecdc4;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.job-listing::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #4ecdc4;
+    border-radius: 50%;
+}
+.job-listing h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.job-description {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+.job-description h4 {
+    color: #4ecdc4;
+    margin-bottom: 0.5rem;
+}
+.job-description ul {
+    padding-left: 1.5rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus {
+    border-color: #4ecdc4;
+    outline: none;
+}
+button {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #ff8787;
+}
+.view-details {
+    background-color: #4ecdc4;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+.view-details:hover {
+    background-color: #45b7a0;
+}
+.creative-spark {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+select {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%;
+    background-size: 0.65em auto;
+}
+
+select:focus {
+    border-color: #4ecdc4;
+    outline: none;
+}
+
+footer {
+    background-color: #181828;
+    height: 20px;
+    padding: 15px 0;
+    border-top: 1px solid #313646;
+    color: #b0b0b0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-component {
+    color: white;
+    border-right: 1px solid white;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-component:nth-child(2):hover, .footer-component:nth-child(3):hover {
+    text-decoration: underline;
+}
+
+#header-part {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+}
+
+#logo {
+    font-family: "Inter", sans-serif;
+    font-size: 30.4px;
+    font-weight: 900;
+    line-height: 36.79px;
+    color: white;
+}
+
+#desktop-options {
+    display: none;
+}
+
+#mobile-tablet-option {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mt-option {
+    width: 26.25px;
+    height: 2.92px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+#header-part {
+    padding: 10px;
+    background-color: rgb(252, 245, 236);
+}
+
+#logo {
+    padding-left: 20px !important;
+}
+
+#logo, .desktop-option, button{
+    color: black !important;
+}
+
+.mt-option {
+    background-color: black;
+}
+
+.button {
+    border: 3px solid black !important;
+    background-color: transparent;
+}
+
+@media screen and (min-width: 1200px) {
+    #mobile-tablet-option {
+        display: none;
+    }
+
+    #desktop-options {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #get-started-button {
+        margin-top: 0;
+    }
+
+    .desktop-option {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.78px;
+        color: white;
+    }
+
+    .desktop-option {
+        box-sizing: inherit;
+        transition-property: all;
+        transition-duration: .6s;
+        transition-timing-function: ease;
+        cursor: pointer;
+        letter-spacing: 0;
+        text-decoration: none;
+    }
+
+    .desktop-option:hover,
+    .desktop-option:active {
+    letter-spacing: 5px;
+    }
+
+    .desktop-option:after,
+    .desktop-option:before {
+    backface-visibility: hidden;
+    bottom: 0px;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+    }
+
+    .desktop-option:hover:after,
+    .desktop-option:hover:before {
+    backface-visibility: hidden;
+    border: 1px solid black;
+    transition: width 350ms ease-in-out;
+    width: 100%;
+    }
+
+    .desktop-option:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 100%;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(24, 24, 40, 0.95); /* Dark background to match the header */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(217, 133, 44, 0.1); /* Subtle highlight color */
+    color: #D9852C; /* Accent color from the original design */
+}
+
+.dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .mt-option {
+    background-color: #D9852C; /* Change color on hover */
+}

@@ -32,6 +32,10 @@ button {
     border: 3px solid black !important;
 }
 
+button:hover {
+    background-color: #ff8787;
+}
+
 #main-content {
     max-width: 800px;
     padding: 15px;

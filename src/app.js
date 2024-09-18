@@ -48,6 +48,10 @@ app.get("/artists", (req, res) => {
   res.render(`artist`, { artists: ARTISTS});
 })
 
+app.get("/career", (req, res) => {
+  res.render(`career`);
+})
+
 
 const port = process.env.PORT || 3000;
 

@@ -233,14 +233,9 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
-    .desktop-option:after,
-    .desktop-option:before {
-        border: 1px solid black;
-    }
-
     .desktop-option:hover:after,
     .desktop-option:hover:before {
-        border-color: black;
+        border: 1px solid black;
     }
 
     #mobile-tablet-option {

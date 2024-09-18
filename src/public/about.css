@@ -219,7 +219,6 @@ footer {
     .desktop-option:after,
     .desktop-option:before {
     backface-visibility: hidden;
-    border: 1px solid black;
     bottom: 0px;
     content: "";
     display: block;
@@ -232,7 +231,7 @@ footer {
     .desktop-option:hover:after,
     .desktop-option:hover:before {
     backface-visibility: hidden;
-    border-color: black;
+    border: 1px solid black;
     transition: width 350ms ease-in-out;
     width: 100%;
     }

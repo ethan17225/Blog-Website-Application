@@ -1,7 +1,7 @@
 const BLOGS = [
     {
         id: 1,
-        title: `Masterpieces from Morozov collection return to Russia from France—but three works have been retained`,
+        title: `Masterpieces from Morozov collection return to Russia from France but three works have been retained`,
         date: `5 August, 2022`,
         content: `<p>The masterpieces of the Morozov collection, which had been on display at the Fondation Louis Vuitton in Paris, have safely returned to Russia, according to an official source. This marks the end of a highly successful exhibition that showcased some of the most treasured works of modern art.</p>
 
@@ -26,7 +26,7 @@ const BLOGS = [
     },
     {
         id: 2,
-        title: `Picasso's muse as sea creature—will it break $100m at Sotheby's New York sale?`,
+        title: `Picasso's muse as sea creature will it break $100m at Sotheby's New York sale?`,
         date: `17 February, 2024`,
         content: `<p>The art world is abuzz with anticipation as Sotheby's New York prepares to auction off one of Pablo Picasso's most intriguing works, Femme nue couchée (1932). The painting, set to go under the hammer next month at the Modern evening auction on May 17, is "poised to achieve in excess of $60m," according to the auction house. This masterpiece portrays the artist's teenage lover and "golden muse," Marie-Thérèse Walter, reimagined as a surreal sea creature with fin-like limbs and a distorted head.</p>
 

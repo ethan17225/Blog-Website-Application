@@ -171,6 +171,11 @@
                 <button type="submit">Send Your Spark</button>
             </form>
         </section>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <p>Your application have been successfully recieved. Thank you!</p>
+        </div>
     </main>
 
     <footer>
@@ -223,9 +228,25 @@
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const jobTitle = document.getElementById('job-title').value;
-            alert(`We've received your Spark for the ${jobTitle} position. Thank you so much!`);
-            this.reset();
+            showPopup();
+            setTimeout(() => {
+                    this.reset();
+                    hidePopup();
+                }, 3000);  
         });
+
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+
+        function showPopup() {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function hidePopup() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
     </script>
 </body>
 </html>

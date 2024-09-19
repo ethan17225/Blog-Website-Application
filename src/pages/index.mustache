@@ -86,15 +86,15 @@
                 <div class="layout_item w-50">
                   <div class="newsletter">
                     <h3 class="newsletter_title">Get updates on fun stuff you probably want to know about in your inbox.</h3>
-                    <form action="">
+                    <div id="form">
                       <input type="text" placeholder="Email Address">
-                      <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <button onclick="showPopup()">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
                           <path fill="none" d="M0 0h24v24H0z" />
                           <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
                         </svg>
                       </button>
-                    </form>
+                    </div>
                   </div>
                 </div>
 
@@ -238,5 +238,29 @@
           </div>
         </div>
       </footer>
+
+      <div class="overlay" id="overlay"></div>
+      <div class="popup" id="popup">
+          <p>Thank you for applying. We will contact you soon!</p>
+      </div>
+
+      <script>
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+
+        function showPopup() {
+          popup.style.display = 'block';
+          overlay.style.display = 'block';
+
+          setTimeout(() => {
+            hidePopup();
+          }, 4000);
+        }
+
+        function hidePopup() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+      </script>
     </body>
 </html>

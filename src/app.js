@@ -52,6 +52,10 @@ app.get("/career", (req, res) => {
   res.render(`career`);
 })
 
+app.get("/company", (req, res) => {
+  res.render(`company`);
+})
+
 
 const port = process.env.PORT || 3000;
 

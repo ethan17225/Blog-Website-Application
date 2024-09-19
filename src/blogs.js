@@ -144,7 +144,7 @@ const BLOGS = [
 
 <p>Education is also playing a crucial role in this revival. Many art and design schools are reintroducing traditional craft techniques into their curricula, recognizing their value in developing a well-rounded approach to design. Workshops and classes in various crafts are becoming increasingly popular among hobbyists and professionals alike.</p>
 
-<p>As we look to the future, the revival of traditional crafts in modern design seems set to continue. It represents a desire to reconnect with our material heritage, to value the handmade in an increasingly digital world, and to create objects that are not just aesthetically pleasing but also meaningful and sustainable. This movement is more than just a trend; it's a reevaluation of how we produce and consume, and a celebration of human skill and creativity.</p>`,
+<p>As we look to the future, the revival of traditional crafts in modern design seems set to continue. It represents a desire to reconnect with our material heritage, to value the handmade in an increasingly digital world, and to create objects that are not just aesthetically pleasing but also meaningful and sustainable. This movement is more than just a trend; it's a revaluation of how we produce and consume, and a celebration of human skill and creativity.</p>`,
         alt: `Picasso' Galer`
     },
     {

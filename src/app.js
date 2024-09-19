@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 app.get('/blogs/:id', (req, res) => {
     const id = req.params.id;
     const matchedBlog = BLOGS.find(blog => blog.id.toString() === id);
-    res.render('blog', { blog: matchedBlog, content: matchedBlog.content });
+    res.render('blog', { blog: matchedBlog });
 })
 
 app.get("/about", (req, res) => {

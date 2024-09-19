@@ -50,19 +50,87 @@
             </div>
         </div>
 
-        <div id="main-content">
+        <main>
+        <article id="main-content">
             {{#blog}}
-            <img src="../asset/images/blogs/image{{id}}.jpeg" alt="{{alt}}">
-            <h3>{{title}}</h3>
-            <div id="date">{{date}}</div>
-            <div id="content">{{{content}}}</div>
+            <div class="blog-header">
+                <img src="../asset/images/blogs/image{{id}}.jpeg" alt="{{alt}}">
+                <h1>{{title}}</h1>
+                <div class="blog-meta">
+                    <span class="date">{{date}}</span>
+                    <span class="author">By ArtJunks Team</span>
+                </div>
+            </div>
+            <div class="blog-content">{{{content}}}</div>
             {{/blog}}
-        </div>
+        </article>
+
+        <aside id="suggested-posts">
+            <h2>Suggested Posts</h2>
+            <div id="suggested-posts-container"></div>
+        </aside>
+    </main>
 
         <footer>
             <div class="footer-component">2024 © Artjunks</div>
             <a href="https://github.com/hai17225/Express-Web-Site" class="footer-component" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/ethan17225/" class="footer-component" target="_blank">Linkedin</a>
         </footer>
+
+        <script>
+            const suggestedPosts = [
+  { id: 1, title: "The Rise of Digital Art in the 21st Century", image: "image1.jpeg", excerpt: "Explore how technology is reshaping the art world..." },
+  { id: 2, title: "Mastering Color Theory: A Guide for Aspiring Artists", image: "image2.jpeg", excerpt: "Learn the fundamentals of color theory and how to apply them..." },
+  { id: 3, title: "From Sketch to Masterpiece: The Creative Process Unveiled", image: "image3.jpeg", excerpt: "Discover the steps great artists take to create their works..." },
+  { id: 4, title: "The Impact of Social Media on Modern Art", image: "image4.jpeg", excerpt: "Analyze how platforms like Instagram are changing the art landscape..." },
+  { id: 5, title: "Sustainable Art: Creating Beauty with Eco-Friendly Materials", image: "image5.jpeg", excerpt: "Explore innovative techniques for creating art sustainably..." },
+  { id: 6, title: "The Intersection of AI and Creativity", image: "image6.jpeg", excerpt: "Discover how artificial intelligence is influencing art creation..." },
+  { id: 7, title: "Street Art: From Vandalism to Cultural Phenomenon", image: "image7.jpeg", excerpt: "Trace the evolution of street art and its impact on urban culture..." },
+  { id: 8, title: "The Psychology of Art: How Colors Affect Emotions", image: "image8.jpeg", excerpt: "Delve into the psychological impact of colors in artwork..." },
+  { id: 9, title: "NFTs and the Future of Digital Ownership", image: "image9.jpeg", excerpt: "Explore the world of NFTs and their implications for artists..." },
+  { id: 10, title: "Art as Activism: Making a Difference Through Creativity", image: "image10.jpeg", excerpt: "Learn how artists are using their work to drive social change..." },
+  { id: 11, title: "The Revival of Traditional Crafts in Contemporary Art", image: "image11.jpeg", excerpt: "Discover how ancient techniques are finding new life in modern art..." },
+  { id: 12, title: "Virtual Reality: The New Frontier in Art Exhibitions", image: "image12.jpeg", excerpt: "Explore how VR is transforming the way we experience art galleries..." },
+];
+
+            // Function to shuffle array
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            // Function to create a suggested post card
+            function createSuggestedPostCard(post) {
+                const card = document.createElement('div');
+                card.className = 'suggested-post';
+                card.innerHTML = `
+                    <img src="../asset/images/blogs/${post.image}" alt="${post.title}">
+                    <div class="suggested-post-content">
+                        <h3>${post.title}</h3>
+                        <p>${post.excerpt}</p>
+                        <a href="/blogs/${post.id}" class="read-more"">Read More</a>
+                    </div>
+                `;
+                return card;
+            }
+
+            // Function to display random suggested posts
+            function displayRandomSuggestedPosts() {
+                const container = document.getElementById('suggested-posts-container');
+                const shuffledPosts = shuffleArray([...suggestedPosts]);
+                const selectedPosts = shuffledPosts.slice(0, 5); // Display 3 random posts
+
+                selectedPosts.forEach(post => {
+                    const card = createSuggestedPostCard(post);
+                    container.appendChild(card);
+                });
+            }
+
+            // Call the function when the page loads
+            window.addEventListener('load', displayRandomSuggestedPosts);
+        </script>
     </body>
 </html>

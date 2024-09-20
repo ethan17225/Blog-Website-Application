@@ -107,9 +107,9 @@
                 const card = document.createElement('div');
                 card.className = 'suggested-post';
                 card.innerHTML = `
-                    <img src="../asset/images/blogs/${post.image}" alt="${post.title}">
+                    <img src="../asset/images/blogs/${post.image}" alt="${post.title}" onclick="location.href = '/blogs/${post.id}';">
                     <div class="suggested-post-content">
-                        <h3>${post.title}</h3>
+                        <h3 onclick="location.href = '/blogs/${post.id}';">${post.title}</h3>
                         <p>${post.excerpt}</p>
                         <a href="/blogs/${post.id}" class="read-more"">Read More</a>
                     </div>

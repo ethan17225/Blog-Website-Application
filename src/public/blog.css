@@ -125,6 +125,14 @@ h1 {
     margin: 0 0 0.5rem 0;
 }
 
+.suggested-post h3:hover {
+    color: #D9852C;
+}
+
+.suggested-post:hover {
+    cursor: pointer;
+}
+
 .suggested-post p {
     font-size: 0.9rem;
     color: #666;

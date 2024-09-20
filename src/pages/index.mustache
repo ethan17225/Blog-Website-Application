@@ -63,7 +63,7 @@
 
         <div id="content-container">
             {{#blogs}}
-                <div class="card">
+                <div class="card" onclick="location.href = '/blogs/{{id}}';">
                     <img class="image" src="../asset/images/blogs/image{{id}}.jpeg" alt="{{alt}}" onclick="location.href = '/blogs/{{id}}';">
                     <div class="content-box">
                         <div class="date">{{date}}</div>

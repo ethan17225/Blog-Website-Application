@@ -64,10 +64,10 @@
         <div id="content-container">
             {{#blogs}}
                 <div class="card">
-                    <img class="image" src="../asset/images/blogs/image{{id}}.jpeg" alt="{{alt}}">
+                    <img class="image" src="../asset/images/blogs/image{{id}}.jpeg" alt="{{alt}}" onclick="location.href = '/blogs/{{id}}';">
                     <div class="content-box">
                         <div class="date">{{date}}</div>
-                        <div class="small-title">{{title}}</div>
+                        <div class="small-title" onclick="location.href = '/blogs/{{id}}';">{{title}}</div>
                         <a class="read-more" href="/blogs/{{id}}">Read More -></a>
                     </div>
                 </div>

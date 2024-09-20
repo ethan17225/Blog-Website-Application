@@ -32,7 +32,7 @@
                     <a class="desktop-option" href="/about">About</a>
                     <a class="desktop-option" href="/artists">Artists</a>
                     <a class="desktop-option" href="/career">Careers</a>
-                    <a class="desktop-option" href="/">News</a>
+                    <a class="desktop-option" onclick="scrollDownToNews()">News</a>
                     <a class="desktop-option" href="/company">Company</a>
                     <button class="button" id="get-started-button" onclick="location.href = '/signup';"><span>Get Started</span></button>
                 </div>
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <h3 style="text-align: left;">Newest reads</h3>
+        <h1 style="text-align: center;">Newest reads</h1>
 
         <div id="content-container">
             {{#blogs}}
@@ -254,6 +254,10 @@
 
         function scrollUp() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollDownToNews() {
+          window.scrollTo({ top: 740, behavior: 'smooth' });
         }
       </script>
     </body>

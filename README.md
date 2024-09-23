@@ -2,7 +2,7 @@
 
 An Interactive Responsive Blog Website Application
 
-Link: https://blog-website-application.vercel.app/
+Link: https://artjunks-azure.vercel.app/
 
 ## Features
 
